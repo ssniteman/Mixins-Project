@@ -1,0 +1,107 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+
+
+
+@mixin shane-radius($radius, $width, $color) {
+    border-radius: $radius;
+    border: 3px solid black;
+    background-color: $color;
+    width: $width;
+    height: 100px;
+    margin-top: 40px;
+
+}
+
+
+
+
+.box-two { 
+ @include shane-radius(10px, 200px, green);
+}
+
+
+
+
+
+
+@mixin how-big {
+width: 100px;
+height: 200px;
+background-color: black;
+border: 1px solid green;
+}
+
+.box {
+@include how-big
+}
+
+
+
+
+
+
+
+.box-three {
+     @include how-big    
+}
+
+
+@mixin submit-button {
+    color: white;
+    border: 1px #b98100;
+    font-size: 13px;
+    text-align: center;
+    position: relative;
+    width: 115px;
+    height: 5px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px white;
+    border: 1px solid #1A1712;
+    padding-top: 7px;
+    padding-bottom: 17px;
+
+    background: #a5a5a5; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #a5a5a5 12%, #3f3e3d 100%, #3f3e3d 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(12%,#a5a5a5), color-stop(100%,#3f3e3d), color-stop(100%,#3f3e3d)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #a5a5a5 12%,#3f3e3d 100%,#3f3e3d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #a5a5a5 12%,#3f3e3d 100%,#3f3e3d 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #a5a5a5 12%,#3f3e3d 100%,#3f3e3d 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #a5a5a5 12%,#3f3e3d 100%,#3f3e3d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5a5a5', endColorstr='#3f3e3d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.submit {
+    @include submit-button;
+    display: inline-block;
+}
+
+.submit-two {
+    margin-left: 20px;
+    @include submit-button;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
