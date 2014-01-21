@@ -27,10 +27,204 @@
 
       
 
-        <div class="submit">Submit</div>
-        <div class="submit-two">Submit</div>
-        <div class="box-three"></div>
+        <div class="submit">
+            <div class="submit-one">Submit</div>
+            <div class="submit-two">Submit</div>
+        </div>
 
+        <xmp>
+        <div class="submit">
+            <div class="submit-one">Submit</div>
+            <div class="submit-two">Submit</div>
+        </div>
+
+
+@mixin submit-button {
+    color: white;
+    border: 1px #b98100;
+    font-size: 13px;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px white;
+    border: 1px solid #1A1712;
+
+    background: #a5a5a5; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #a5a5a5 12%, #3f3e3d 100%, #3f3e3d 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(12%,#a5a5a5), color-stop(100%,#3f3e3d), color-stop(100%,#3f3e3d)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #a5a5a5 12%,#3f3e3d 100%,#3f3e3d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #a5a5a5 12%,#3f3e3d 100%,#3f3e3d 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #a5a5a5 12%,#3f3e3d 100%,#3f3e3d 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #a5a5a5 12%,#3f3e3d 100%,#3f3e3d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5a5a5', endColorstr='#3f3e3d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    &:hover {
+        color: blue;
+        box-shadow: 0 1px 1px black;
+    }
+
+}
+
+.submit {
+    width: 252px;
+    margin: 50px auto;
+}
+
+.submit-one {
+    @include submit-button;
+    display: inline-block;
+
+}
+.submit-two {
+    margin-left: 20px;
+    @include submit-button;
+    display: inline-block;
+}
+
+        </xmp>
+
+        <div class="header">
+             <ul>
+             <li>About</li>
+            <li>Music</li>
+            <li>Tour</li>
+            <li>Photos</li>
+            <li>Videos</li>
+            <li>Contact</li>
+            </ul>
+        </div>
+
+        <xmp>
+             <div class="header">
+             <ul>
+             <li>About</li>
+            <li>Music</li>
+            <li>Tour</li>
+            <li>Photos</li>
+            <li>Videos</li>
+            <li>Contact</li>
+            </ul>
+        </div>
+
+    @mixin header-links {
+    color: white;
+    text-shadow: rgb(216, 169, 0) 0 1px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 5px;
+}
+.header {
+    width: 252px;
+    margin: 50px auto;
+    background-color: black;
+    width: 300px;
+    height: 145px;
+    @include header-links;
+
+}
+
+
+        </xmp>
+        
+        <div class="background-two">
+            <div class="heading">About</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             <div class="heading-two">Music</div> 
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             <div class="heading-three">Tour</div>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
+
+        </div>
+
+        <xmp>
+
+         <div class="background-two">
+         <div class="heading">About</div>
+         <p>Lorem ipsum dolor sit amet, consectetadipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magaliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris niut aliquip ex ea commodo
+          consequat. Duis aute irure dolor reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatuExcepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserumollit anim id est laborum.</p>
+          <div class="heading-two">Music</div> 
+          <p>Lorem ipsum dolor sit amet, consectetadipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magaliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris niut aliquip ex ea commodo
+          consequat. Duis aute irure dolor reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatuExcepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserumollit anim id est laborum.</p>
+          <div class="heading-three">Tour</div>
+          <p>Lorem ipsum dolor sit amet, consectetadipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magaliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris niut aliquip ex ea commodo
+          consequat. Duis aute irure dolor reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatuExcepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserumollit anim id est laborum.<p>
+
+          .background-two {
+    margin: 50px auto;
+    margin-top: 40px;
+    height: 300px;
+    width: 600px;
+    background-color: gray;
+}
+
+
+@mixin headings ($color) {
+    color: $color;
+    font-size: 16px;
+    text-shadow: rgb(42, 38, 38) 0 1px;
+
+
+}
+
+.heading {
+    @include headings (orange);
+}
+
+.heading-two {
+    @include headings (green);
+}
+
+.heading-three {
+    @include headings (blue);
+}
+
+
+
+
+p {
+    color: white;
+    font-size: 12px;
+}
+
+        </xmp>
+
+        </div>
 
 
 
