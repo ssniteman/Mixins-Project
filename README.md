@@ -1,6 +1,6 @@
 Mixins-Project
 ==============
 
-This assignment was to create 15 mixins.
+This assignment was to create 3 mixins.
 
 (Just experimenting)
